@@ -14,16 +14,20 @@ public class apicontroller {
     @Value("${app.default.message}")
     private String message;
 
-    @Value("${app.default.osvariable}")
+    @Value("${app.default.osvariable.1}")
     private String variableEntorno1;
 
     @Value("${app.default.osvariable.2}")
     private String variableEntorno2;
 
+    @Value("${app.default.osvariable.3}")
+    private String variableEntorno3;
+
     @GetMapping(value = "/message", produces = {MediaType.APPLICATION_JSON_VALUE})
     public Map<String, String> getMessage(){
         return Map.of("message", message,
                 "variable_entorno_1", variableEntorno1,
-                "variable_entorno_2", variableEntorno2);
+                "variable_entorno_2", variableEntorno2,
+                "variable_entorno_3", variableEntorno3);
     }
 }
