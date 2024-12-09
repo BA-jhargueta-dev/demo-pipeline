@@ -14,4 +14,5 @@ public class Estructura {
     private String variableEntorno1;
     private String variableEntorno2;
     private String variableEntorno3;
+    private InformacionAdicional informacionAdicional;
 }
