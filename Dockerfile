@@ -11,6 +11,7 @@ RUN ./mvnw -DskipTests clean install
 FROM alpine/java:17-jre AS final
 WORKDIR /opt/app
 ENV TZ=America/Tegucigalpa
+ENV OS_VAR_1=Definido desde Dockerfile
 EXPOSE 8080
 COPY --from=builder /opt/app/target/*.jar /opt/app/*.jar
 ENTRYPOINT ["java", "-jar", "/opt/app/*.jar"]
